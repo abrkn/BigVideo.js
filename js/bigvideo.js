@@ -41,14 +41,6 @@
 
         var settings = $.extend({}, defaults, options);
 
-        // If only using mp4s and on firefox, use flash fallback
-        var ua = navigator.userAgent.toLowerCase();
-        var isFirefox = ua.indexOf('firefox') != -1;
-        if (settings.useFlashForFirefox && (isFirefox)) {
-			VideoJS.options.techOrder = ['flash'];
-		}
-
-
 		function updateSize() {
 			var windowW = $(window).width();
 			var windowH = $(window).height();
